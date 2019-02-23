@@ -31,7 +31,7 @@ namespace TechnicalAssignment.Repository
             return new CustomerInquiryViewModel(GetCustomerById(input.CustomerId))
           {
                 Transactions = RepositoryContext.Transactions
-                    .Where(a => a.Status == input.CustomerId).OrderByDescending(date=>date.TransactionDatetime).Take(5)
+                    .Where(a => a.CustomerId == input.CustomerId).OrderByDescending(date=>date.TransactionDatetime).Take(5)
             };
         }
 

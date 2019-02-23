@@ -39,6 +39,8 @@ namespace TechnicalAssignment.Controllers
 
                 if (ModelState.IsValid)
                 {
+
+                    
                     var customerDetails = _repository.GetCustomerTransaction(input);
                     if (customerDetails.CustomerId==null)
                     {
@@ -49,11 +51,13 @@ namespace TechnicalAssignment.Controllers
                         return Ok(customerDetails);
                     }
                 }
-                else
+                else if(!ModelState.IsValid)
                 {
-
                     return BadRequest(ModelState);
                 }
+                return BadRequest();
+
+
 
 
             }
