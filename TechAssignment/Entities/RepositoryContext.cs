@@ -18,9 +18,6 @@ namespace TechnicalAssignment.Entities
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=KAUSHIK\\SQLEXPRESS;Database=TechnicalAssignment;Trusted_Connection=True;MultipleActiveResultSets=true");
-        }
+      
     }
 }
