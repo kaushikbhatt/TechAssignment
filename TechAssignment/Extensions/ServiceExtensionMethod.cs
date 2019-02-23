@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TechnicalAssignment.Entities;
+using TechnicalAssignment.IRepository;
+using TechnicalAssignment.Repository;
 
 namespace TechnicalAssignment.Extensions
 {
@@ -31,8 +33,16 @@ namespace TechnicalAssignment.Extensions
 
         }
 
+        public static void ConfigureRepositoryWrapper(this IServiceCollection services)
 
-      
-      
+        {
+
+            services.AddScoped<ICustomerInquiry, CustomerInquiry>();
+
+        }
+
+
+
+
     }
 }
