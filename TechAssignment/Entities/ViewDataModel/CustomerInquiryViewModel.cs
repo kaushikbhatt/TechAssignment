@@ -18,15 +18,10 @@ namespace TechnicalAssignment.Entities.ViewDataModel
         {
             CustomerId = customer.CustomerId;
             Name = customer.CustomerName;
-                Email = customer.ContactEmail;
+            Email = customer.ContactEmail;
             Mobile = customer.MobileNO;
-         
-         
         }
 
-        internal bool IsEmptyObject()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
